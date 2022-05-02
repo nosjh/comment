@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Reset } from "styled-reset";
+import { Route, Routes } from "react-router-dom";
+import List from "./pages/List";
+import ListIn from "./pages/ListIn";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <React.Fragment>
+    <Reset />
+    <Routes>
+      <Route path="/" element={<List />} />
+      <Route path="/list/:listname" element={<ListIn />} />
+    </Routes>
+  </React.Fragment>
+);
 
 export default App;
