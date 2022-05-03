@@ -1,0 +1,18 @@
+.CommentListItem-virtualized {
+  & + & {
+    border-top: 1px solid #acacac;
+  }
+}
+
+.CommentListItem {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.remove {
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  color: black;
+}
