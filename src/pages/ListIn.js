@@ -38,7 +38,7 @@ function createBulkComments() {
   for (let i = 1; i <= 3; i++) {
     array.push({
       id: i,
-      text: `댓글 ${i}`,
+      text: `댓글`,
     });
   }
 
